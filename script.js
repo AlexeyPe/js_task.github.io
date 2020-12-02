@@ -32,21 +32,21 @@ console.log(`2 функция: ${calc2(numbers3, k)}`) //true
 
 // 3 Функция принимает целове положительное число
 // Возвращает сумму всех чисел в переданном числе
-let num = 102 // 3
-let num1 = 133 // 7
-let num2 = 15591 // 21
+let num = 133 // 7
+let num1 = 15591 // 21
 
 function calc3(num) {
     let str_num = num + ''
     let sum = 0
     for(let i = 0; i < str_num.length; i++) {
         int_num = Number(str_num[i])
-        sum += int_num
+        sum += int_num 
+        // Можно записать более кратко с помощью унарного +, не объявляя int_num
     }
     return sum
 }
-console.log(`3.0 функция: ${calc3(num1)}`) // 7
-console.log(`3.1 функция: ${calc3(num2)}`) // 21
+console.log(`3.0 функция: ${calc3(num)}`) // 7
+console.log(`3.1 функция: ${calc3(num1)}`) // 21
 
 // 4 Функция принимает положительное число
 // Строится горка из хэшей, высота которой равна принимаемому числу
@@ -136,4 +136,40 @@ console.log(`10.0 функция(округление): ${func10(10)}`) // 10
 console.log(`10.1 функция(округление): ${func10(69)}`) // 70
 console.log(`10.2 функция(округление): ${func10(-12)}`) // -10
 console.log(`10.3 функция(округление): ${func10(48589343)}`) // 48589345
+
+// 11 Функция принимает массив
+// Возвращает: n число - находится под 5 номером в массиве, далее что под 4 номером и т.д.
+const array11 = [-20, 0, 19, 7]
+
+function func11(array) {
+    console.log("11 функция: начата")
+    for ( let i = array.length - 1 ; i >= 0; i--) {
+        console.log(`Под номером ${i} находится ${array[i]}`)
+    }
+    console.log("11 функция: закончена")
+}
+func11(array11)
+
+// 12 Функция принимает положительное число
+// Возвращает массив от принимаемого числа до 0, числа должны быть кратны 3 (11, 9, 6, 3, 0)
+function func12(num) {
+    const array = []
+    for (let i = num; i >= 0; i--) {
+        if (i % 3 === 0) {
+            array.push(i)
+        }
+    }
+    return array
+}
+console.log(`12 функция: ${func12(11)}`)
+
+// Функция передвижения курга в index.html
+window.onload = function move() {
+    
+    setInterval(() => {
+        document.getElementById("circle").style.right = Math.random() * (window.innerWidth - 80) + 'px';
+        document.getElementById("circle").style.top = Math.random() * (window.innerHeight - 80) + 'px';
+    }, 2000);
+}
+
 

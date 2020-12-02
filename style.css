@@ -1,9 +1,27 @@
 body {
+    margin: 0;
+}
+.page {
     background-color: #444;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    margin: 0;
+    position: relative;
+}
+.title {
+    color: #ddd;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: consolas,serif;
+    z-index: 2;
+}
+#circle {
+    z-index: 1;
+    position: absolute;
+    background-color: #ddd;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    transition: .3s ease;
 }
