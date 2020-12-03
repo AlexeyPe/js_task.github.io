@@ -1,27 +1,11 @@
-body {
-    margin: 0;
+body { 
+    margin: 0; 
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
 }
-.page {
-    background-color: #444;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    position: relative;
-}
-.title {
-    color: #ddd;
-    font-weight: 400;
-    font-size: 18px;
-    font-family: consolas,serif;
-    z-index: 2;
-}
-#circle {
-    z-index: 1;
-    position: absolute;
-    background-color: #ddd;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    transition: .3s ease;
+#canvas { 
+    background: #333;
+    height: 100%;
+    width: 100%;
 }

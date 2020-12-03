@@ -1,7 +1,7 @@
 // 1 Функция принимает массив, возвращает сумму всех нечётных чисел больше нуля
 let numbers = [1, 2, -10, 0, 11, 120, -20, 10]
 
-function calc(array) {
+function func1(array) {
     let product = 0;
     array.forEach(element => {
         if(element > 0 && element % 2) {
@@ -10,7 +10,7 @@ function calc(array) {
     });
     return product
 }
-console.log(`1 функция: ${calc(numbers)}`) //12
+console.log(`1 функция: ${func1(numbers)}`) //12
 
 // 2 Функция принимает массив целых чисел и число k. 
 // Возвращает true, если сумма 2 чисел равна k, иначе false
@@ -18,7 +18,7 @@ let numbers2 = [99, 2, 5, 39]
 let numbers3 = [1, 2, 3, 39, 20, 5, 6]
 let k = 5;
 
-function calc2(array, k) {
+function func2(array, k) {
     let product = false
     for (let i = 0; i < array.length; i++) {
         let j = array[i] + array[i + 1]
@@ -28,14 +28,14 @@ function calc2(array, k) {
     }
     return product
 }
-console.log(`2 функция: ${calc2(numbers3, k)}`) //true
+console.log(`2 функция: ${func2(numbers3, k)}`) //true
 
 // 3 Функция принимает целове положительное число
 // Возвращает сумму всех чисел в переданном числе
 let num = 133 // 7
 let num1 = 15591 // 21
 
-function calc3(num) {
+function func3(num) {
     let str_num = num + ''
     let sum = 0
     for(let i = 0; i < str_num.length; i++) {
@@ -45,8 +45,8 @@ function calc3(num) {
     }
     return sum
 }
-console.log(`3.0 функция: ${calc3(num)}`) // 7
-console.log(`3.1 функция: ${calc3(num1)}`) // 21
+console.log(`3.0 функция: ${func3(num)}`) // 7
+console.log(`3.1 функция: ${func3(num1)}`) // 21
 
 // 4 Функция принимает положительное число
 // Строится горка из хэшей, высота которой равна принимаемому числу
@@ -162,14 +162,3 @@ function func12(num) {
     return array
 }
 console.log(`12 функция: ${func12(11)}`)
-
-// Функция передвижения курга в index.html
-window.onload = function move() {
-    
-    setInterval(() => {
-        document.getElementById("circle").style.right = Math.random() * (window.innerWidth - 80) + 'px';
-        document.getElementById("circle").style.top = Math.random() * (window.innerHeight - 80) + 'px';
-    }, 2000);
-}
-
-
